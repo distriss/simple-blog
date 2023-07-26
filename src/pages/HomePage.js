@@ -9,7 +9,7 @@ const HomePage = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get('http://localhost:3000/posts');
+      const res = await axios.get('http://localhost:5050/posts');
       setPosts(res.data);
     };
     
@@ -18,7 +18,7 @@ const HomePage = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/posts/${id}`);
+      await axios.delete(`http://localhost:5050/posts/${id}`);
       setPosts(posts.filter((post) => post._id !== id));
     } catch (error) {
       console.error("Error deleting post", error);

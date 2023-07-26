@@ -19,7 +19,7 @@ const NewPostPage = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    await axios.post('http://localhost:3000/posts', post);
+    await axios.post('http://localhost:5050/posts', post);
     navigate('/');
   };
 
